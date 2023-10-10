@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Federico\\Desktop\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones.csproj",
-      "projectName": "BaroneFederico__CuadernoComunicaciones",
-      "projectPath": "C:\\Users\\Federico\\Desktop\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones.csproj",
+      "projectUniqueName": "C:\\Users\\Federico\\Desktop\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\Entidades.csproj",
+      "projectName": "Entidades",
+      "projectPath": "C:\\Users\\Federico\\Desktop\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\Entidades.csproj",
       "packagesPath": "C:\\Users\\Federico\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Federico\\Desktop\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\obj\\",
       "projectStyle": "PackageReference",

@@ -34,7 +34,7 @@ namespace Interfaz
                 //MessageBoxIcon.Information);
                 VentanaEmergente ve = new VentanaEmergente("Log in ", "Usuario logeado con exito");
                 ve.ShowDialog();
-                if(ve.DialogResult == DialogResult.OK)
+                if (ve.DialogResult == DialogResult.OK)
                 {
                     MenuPrincipal mp = new MenuPrincipal();
                     mp.Show();
@@ -47,6 +47,11 @@ namespace Interfaz
                                                                       MessageBoxIcon.Error);
 
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

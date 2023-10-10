@@ -33,12 +33,13 @@
             txtClave = new TextBox();
             btnIngresar = new Button();
             btnCerrar = new Button();
+            btnCancelar = new Button();
             SuspendLayout();
             // 
             // txtUsuario
             // 
             txtUsuario.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            txtUsuario.Location = new Point(246, 147);
+            txtUsuario.Location = new Point(226, 111);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.PlaceholderText = "Ingrese usuario";
             txtUsuario.Size = new Size(325, 34);
@@ -47,7 +48,7 @@
             // txtClave
             // 
             txtClave.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            txtClave.Location = new Point(246, 211);
+            txtClave.Location = new Point(226, 195);
             txtClave.Name = "txtClave";
             txtClave.PasswordChar = '*';
             txtClave.PlaceholderText = "Ingrese contraseña";
@@ -58,9 +59,9 @@
             // 
             btnIngresar.FlatStyle = FlatStyle.Popup;
             btnIngresar.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            btnIngresar.Location = new Point(321, 292);
+            btnIngresar.Location = new Point(290, 263);
             btnIngresar.Name = "btnIngresar";
-            btnIngresar.Size = new Size(156, 73);
+            btnIngresar.Size = new Size(169, 73);
             btnIngresar.TabIndex = 0;
             btnIngresar.Text = "INGRESAR";
             btnIngresar.UseVisualStyleBackColor = true;
@@ -79,6 +80,18 @@
             btnCerrar.UseVisualStyleBackColor = true;
             btnCerrar.Click += btnCerrar_Click;
             // 
+            // btnCancelar
+            // 
+            btnCancelar.FlatStyle = FlatStyle.Popup;
+            btnCancelar.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCancelar.Location = new Point(290, 365);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(169, 73);
+            btnCancelar.TabIndex = 4;
+            btnCancelar.Text = "CANCELAR";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
+            // 
             // FormLogin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -86,6 +99,7 @@
             BackColor = SystemColors.MenuHighlight;
             ClientSize = new Size(800, 450);
             ControlBox = false;
+            Controls.Add(btnCancelar);
             Controls.Add(btnCerrar);
             Controls.Add(btnIngresar);
             Controls.Add(txtClave);
@@ -108,5 +122,6 @@
         private TextBox txtClave;
         private Button btnIngresar;
         private Button btnCerrar;
+        private Button btnCancelar;
     }
 }

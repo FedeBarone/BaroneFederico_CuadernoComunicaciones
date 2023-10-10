@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BaroneFederico__CuadernoComunicaciones
+namespace Entidades.Enumerados
 {
-    public class Preceptora
+    public enum Rol
     {
-
+        Administrador,
+        UsuarioFinal
     }
 }
