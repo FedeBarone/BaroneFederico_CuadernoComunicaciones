@@ -7,13 +7,12 @@ using System.Threading.Tasks;
 
 namespace Entidades.Usuarios
 {
-    public class Familia : Usuario
+    public class Familia : Usuario//tengo que ver si el nombre "familia" es el correcto
     {
-        Rol rol;
-
-        public Familia(string nombre, int id, string usuario, string clave) : base(nombre, id, usuario, clave)
+        //EN PROCESO...
+        public Familia(string nombre, int id, string usuario, string clave) : base(nombre, id, usuario, clave, Rol.UsuarioFinal)
         {
-            this.rol = Rol.UsuarioFinal;
+       
         }
     }
 }

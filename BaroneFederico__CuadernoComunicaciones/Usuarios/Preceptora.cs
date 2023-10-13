@@ -9,11 +9,11 @@ namespace Entidades.Usuarios
 {
     public class Preceptora : Usuario
     {
-        Rol rol;
-
-        public Preceptora(string nombre, int id, string usuario, string clave) : base(nombre, id, usuario, clave)
+        //EN PROCESO...
+        public Preceptora(string nombre, int id, string usuario, string clave) : base(nombre, id, usuario, clave, Rol.Administrador)
         {
-            this.rol = Rol.Administrador;
+           
         }
+
     }
 }

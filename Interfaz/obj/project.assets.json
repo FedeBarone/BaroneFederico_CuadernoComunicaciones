@@ -2,28 +2,28 @@
   "version": 3,
   "targets": {
     "net6.0-windows7.0": {
-      "BaroneFederico__CuadernoComunicaciones/1.0.0": {
+      "Entidades/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/BaroneFederico__CuadernoComunicaciones.dll": {}
+          "bin/placeholder/Entidades.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BaroneFederico__CuadernoComunicaciones.dll": {}
+          "bin/placeholder/Entidades.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "BaroneFederico__CuadernoComunicaciones/1.0.0": {
+    "Entidades/1.0.0": {
       "type": "project",
-      "path": "../BaroneFederico__CuadernoComunicaciones/BaroneFederico__CuadernoComunicaciones.csproj",
-      "msbuildProject": "../BaroneFederico__CuadernoComunicaciones/BaroneFederico__CuadernoComunicaciones.csproj"
+      "path": "../BaroneFederico__CuadernoComunicaciones/Entidades.csproj",
+      "msbuildProject": "../BaroneFederico__CuadernoComunicaciones/Entidades.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
-      "BaroneFederico__CuadernoComunicaciones >= 1.0.0"
+      "Entidades >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -53,8 +53,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\Federico\\Desktop\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones.csproj": {
-              "projectPath": "C:\\Users\\Federico\\Desktop\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones.csproj"
+            "C:\\Users\\Federico\\Desktop\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\Entidades.csproj": {
+              "projectPath": "C:\\Users\\Federico\\Desktop\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\Entidades.csproj"
             }
           }
         }

@@ -4,12 +4,12 @@
     "C:\\Users\\Federico\\Desktop\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\Interfaz\\Interfaz.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Federico\\Desktop\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones.csproj": {
+    "C:\\Users\\Federico\\Desktop\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Federico\\Desktop\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones.csproj",
-        "projectName": "BaroneFederico__CuadernoComunicaciones",
-        "projectPath": "C:\\Users\\Federico\\Desktop\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones.csproj",
+        "projectUniqueName": "C:\\Users\\Federico\\Desktop\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\Entidades.csproj",
+        "projectName": "Entidades",
+        "projectPath": "C:\\Users\\Federico\\Desktop\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\Entidades.csproj",
         "packagesPath": "C:\\Users\\Federico\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Federico\\Desktop\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\obj\\",
         "projectStyle": "PackageReference",
@@ -83,8 +83,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\Federico\\Desktop\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones.csproj": {
-                "projectPath": "C:\\Users\\Federico\\Desktop\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones.csproj"
+              "C:\\Users\\Federico\\Desktop\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\Federico\\Desktop\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\Entidades.csproj"
               }
             }
           }

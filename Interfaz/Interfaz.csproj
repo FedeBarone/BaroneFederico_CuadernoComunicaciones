@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones.csproj" />
+    <ProjectReference Include="..\BaroneFederico__CuadernoComunicaciones\Entidades.csproj" />
   </ItemGroup>
 
   <ItemGroup>

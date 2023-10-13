@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Entidades.Enumerados;
+using Entidades.Usuarios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,13 @@ namespace Interfaz
 {
     public partial class MenuPrincipal : Form
     {
-        public MenuPrincipal()
+        private Usuario usuario;
+        public MenuPrincipal(Usuario usuario)
         {
             InitializeComponent();
+            this.usuario = usuario;
+
+            ConfigurarInterfazSegunRol();
         }
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
@@ -26,5 +32,25 @@ namespace Interfaz
         {
             
         }
+
+        private void ConfigurarInterfazSegunRol()
+        {
+            if (usuario != null)
+            {
+                if (usuario.Rol == Rol.Administrador)
+                {
+                   nOTASToolStripMenuItem.Visible = false;
+
+                }
+                else if (usuario.Rol == Rol.UsuarioFinal)
+                {
+                    iNFORMESToolStripMenuItem.Visible=false;
+                    eVENTOSToolStripMenuItem.Visible=false;
+
+                }
+            }
+        }
+
+
     }
 }

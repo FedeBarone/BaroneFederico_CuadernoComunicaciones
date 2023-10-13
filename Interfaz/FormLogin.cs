@@ -1,4 +1,7 @@
-using BaroneFederico__CuadernoComunicaciones;
+using Entidades.Archivos;
+using Entidades.Enumerados;
+using Entidades.Usuarios;
+using Interfaz.Herramientas;
 using Microsoft.VisualBasic.Logging;
 using System.Drawing;
 
@@ -27,26 +30,39 @@ namespace Interfaz
         {
             string usuario = this.txtUsuario.Text;
             string clave = this.txtClave.Text;
-            //esto tiene que venir del archivo para validar
-            if (usuario == "Federico" && clave == "1313")
+
+            if(ValidacionDeCamposIniciales(usuario, clave))
             {
-                //MessageBox.Show("Usuario logeado con exito", "Log in", MessageBoxButtons.OK, 
-                //MessageBoxIcon.Information);
-                VentanaEmergente ve = new VentanaEmergente("Log in ", "Usuario logeado con exito");
-                ve.ShowDialog();
-                if (ve.DialogResult == DialogResult.OK)
+                Usuario user = Registros.ObtenerUsuarioValido(usuario, clave);
+
+                if(user != null)
                 {
-                    MenuPrincipal mp = new MenuPrincipal();
-                    mp.Show();
-                    this.Hide();
+                    VentanaEmergente ve = new VentanaEmergente("Log in ", "Usuario logeado con exito");
+                    ve.ShowDialog();
+                
+                    if (ve.DialogResult == DialogResult.OK)
+                    {
+                        MenuPrincipal mp = new MenuPrincipal(user);
+                        mp.Show();
+                        this.Hide();
+
+                    }
+
                 }
             }
-            else
+        }
+
+        private bool ValidacionDeCamposIniciales(string usuario, string clave)
+        {
+            bool returnAux;
+            if (Validador.CadenaEsInvalida(usuario) || Validador.CadenaEsInvalida(clave))
             {
                 MessageBox.Show("Usuario/Clave incorrecta", "Log in", MessageBoxButtons.OK,
-                                                                      MessageBoxIcon.Error);
-
+                                                                     MessageBoxIcon.Error);
+                returnAux = false;
             }
+            returnAux = true;
+            return returnAux;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

@@ -3,8 +3,6 @@ C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico_
 C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\bin\Debug\net6.0-windows\Interfaz.runtimeconfig.json
 C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\bin\Debug\net6.0-windows\Interfaz.dll
 C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\bin\Debug\net6.0-windows\Interfaz.pdb
-C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\bin\Debug\net6.0-windows\BaroneFederico__CuadernoComunicaciones.dll
-C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\bin\Debug\net6.0-windows\BaroneFederico__CuadernoComunicaciones.pdb
 C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\obj\Debug\net6.0-windows\Interfaz.csproj.AssemblyReference.cache
 C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\obj\Debug\net6.0-windows\Interfaz.FormLogin.resources
 C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\obj\Debug\net6.0-windows\Interfaz.csproj.GenerateResource.cache
@@ -12,7 +10,6 @@ C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico_
 C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\obj\Debug\net6.0-windows\Interfaz.AssemblyInfoInputs.cache
 C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\obj\Debug\net6.0-windows\Interfaz.AssemblyInfo.cs
 C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\obj\Debug\net6.0-windows\Interfaz.csproj.CoreCompileInputs.cache
-C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\obj\Debug\net6.0-windows\Interfaz.csproj.CopyComplete
 C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\obj\Debug\net6.0-windows\Interfaz.dll
 C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\obj\Debug\net6.0-windows\refint\Interfaz.dll
 C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\obj\Debug\net6.0-windows\Interfaz.pdb
@@ -21,3 +18,6 @@ C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico_
 C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\obj\Debug\net6.0-windows\Interfaz.Properties.Resources.resources
 C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\obj\Debug\net6.0-windows\Interfaz.VentanaEmergente.resources
 C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\obj\Debug\net6.0-windows\Interfaz.MenuPrincipal.resources
+C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\bin\Debug\net6.0-windows\Entidades.dll
+C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\bin\Debug\net6.0-windows\Entidades.pdb
+C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\obj\Debug\net6.0-windows\Interfaz.csproj.CopyComplete

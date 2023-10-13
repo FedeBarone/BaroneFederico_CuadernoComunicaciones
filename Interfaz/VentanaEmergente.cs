@@ -25,7 +25,7 @@ namespace Interfaz
         {
             this.lblTitulo.Text = titulo;
             this.lblMsj.Text = mensaje;
-            //probandooooo
+           
         }
 
         private void btnOk_Click(object sender, EventArgs e)
