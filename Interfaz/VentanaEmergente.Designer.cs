@@ -74,12 +74,13 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            BackgroundImageLayout = ImageLayout.Center;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(297, 165);
             ControlBox = false;
             Controls.Add(btnOk);
             Controls.Add(lblMsj);
             Controls.Add(lblTitulo);
+            ForeColor = SystemColors.ControlText;
             FormBorderStyle = FormBorderStyle.None;
             Name = "VentanaEmergente";
             StartPosition = FormStartPosition.CenterScreen;

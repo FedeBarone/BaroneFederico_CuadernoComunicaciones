@@ -30,7 +30,7 @@ namespace Interfaz
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            
+
         }
 
         private void ConfigurarInterfazSegunRol()
@@ -39,15 +39,15 @@ namespace Interfaz
             {
                 if (usuario.Rol == Rol.Administrador)
                 {
-                   nOTASToolStripMenuItem.Visible = false;
+                    nOTASToolStripMenuItem.Visible = false;
 
                 }
-                else if (usuario.Rol == Rol.UsuarioFinal)
-                {
-                    iNFORMESToolStripMenuItem.Visible=false;
-                    eVENTOSToolStripMenuItem.Visible=false;
+                //else if (usuario.Rol == Rol.UsuarioFinal)
+                //{
+                //    iNFORMESToolStripMenuItem.Visible = false;
+                //    eVENTOSToolStripMenuItem.Visible = false;
 
-                }
+                //}
             }
         }
 

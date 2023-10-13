@@ -31,15 +31,15 @@ namespace Interfaz
             string usuario = this.txtUsuario.Text;
             string clave = this.txtClave.Text;
 
-            if(ValidacionDeCamposIniciales(usuario, clave))
+            if (ValidacionDeCamposIniciales(usuario, clave))
             {
                 Usuario user = Registros.ObtenerUsuarioValido(usuario, clave);
 
-                if(user != null)
+                if (user != null)
                 {
                     VentanaEmergente ve = new VentanaEmergente("Log in ", "Usuario logeado con exito");
                     ve.ShowDialog();
-                
+
                     if (ve.DialogResult == DialogResult.OK)
                     {
                         MenuPrincipal mp = new MenuPrincipal(user);
