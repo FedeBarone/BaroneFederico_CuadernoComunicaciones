@@ -15,6 +15,7 @@ namespace Interfaz
     public partial class MenuPrincipal : Form
     {
         private Usuario usuario;
+        Form formulario;
         public MenuPrincipal(Usuario usuario)
         {
             InitializeComponent();
@@ -53,10 +54,19 @@ namespace Interfaz
 
         private void altaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAlta formAlta = new frmAlta();
+            this.formulario = new frmAlta();
+            
+            this.formulario.MdiParent = this;
+            this.picInicio.Visible = false;
 
-            formAlta.ShowDialog();
+            this.formulario.Show();
 
+        }
+
+        private void iNICIOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.formulario.Close();
+            this.picInicio.Visible = true;
         }
     }
 }

@@ -49,9 +49,11 @@
             programacionDeEventosToolStripMenuItem = new ToolStripMenuItem();
             pictureBox1 = new PictureBox();
             flowLayoutPanel1 = new FlowLayoutPanel();
+            picInicio = new PictureBox();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picInicio).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -76,6 +78,7 @@
             iNICIOToolStripMenuItem.Name = "iNICIOToolStripMenuItem";
             iNICIOToolStripMenuItem.Size = new Size(92, 29);
             iNICIOToolStripMenuItem.Text = "INICIO";
+            iNICIOToolStripMenuItem.Click += iNICIOToolStripMenuItem_Click;
             // 
             // gESTIONARUSUARIOSToolStripMenuItem
             // 
@@ -90,7 +93,7 @@
             // 
             altaToolStripMenuItem.BackColor = SystemColors.ActiveCaption;
             altaToolStripMenuItem.Name = "altaToolStripMenuItem";
-            altaToolStripMenuItem.Size = new Size(224, 30);
+            altaToolStripMenuItem.Size = new Size(209, 30);
             altaToolStripMenuItem.Text = "Dar de alta";
             altaToolStripMenuItem.Click += altaToolStripMenuItem_Click;
             // 
@@ -98,14 +101,14 @@
             // 
             bajaToolStripMenuItem.BackColor = SystemColors.ActiveCaption;
             bajaToolStripMenuItem.Name = "bajaToolStripMenuItem";
-            bajaToolStripMenuItem.Size = new Size(224, 30);
+            bajaToolStripMenuItem.Size = new Size(209, 30);
             bajaToolStripMenuItem.Text = "Dar de baja";
             // 
             // modificacionToolStripMenuItem
             // 
             modificacionToolStripMenuItem.BackColor = SystemColors.ActiveCaption;
             modificacionToolStripMenuItem.Name = "modificacionToolStripMenuItem";
-            modificacionToolStripMenuItem.Size = new Size(224, 30);
+            modificacionToolStripMenuItem.Size = new Size(209, 30);
             modificacionToolStripMenuItem.Text = "Modificar";
             // 
             // mENSAJERIAToolStripMenuItem
@@ -198,7 +201,7 @@
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(3, 3);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(90, 85);
+            pictureBox1.Size = new Size(81, 61);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -207,10 +210,20 @@
             // 
             flowLayoutPanel1.BackColor = Color.Teal;
             flowLayoutPanel1.Controls.Add(pictureBox1);
-            flowLayoutPanel1.Location = new Point(0, 1);
+            flowLayoutPanel1.Location = new Point(818, 1);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(905, 88);
+            flowLayoutPanel1.Size = new Size(87, 478);
             flowLayoutPanel1.TabIndex = 2;
+            // 
+            // picInicio
+            // 
+            picInicio.Image = (Image)resources.GetObject("picInicio.Image");
+            picInicio.Location = new Point(0, 0);
+            picInicio.Name = "picInicio";
+            picInicio.Size = new Size(823, 479);
+            picInicio.SizeMode = PictureBoxSizeMode.StretchImage;
+            picInicio.TabIndex = 4;
+            picInicio.TabStop = false;
             // 
             // MenuPrincipal
             // 
@@ -220,6 +233,7 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(905, 515);
             ControlBox = false;
+            Controls.Add(picInicio);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.None;
@@ -234,6 +248,7 @@
             menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)picInicio).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -260,5 +275,6 @@
         private ToolStripMenuItem progresoAcademicoToolStripMenuItem;
         private ToolStripMenuItem inscripcionAEventosToolStripMenuItem;
         private ToolStripMenuItem programacionDeEventosToolStripMenuItem;
+        private PictureBox picInicio;
     }
 }

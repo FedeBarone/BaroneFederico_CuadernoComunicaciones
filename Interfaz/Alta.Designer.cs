@@ -169,7 +169,7 @@
             btnGuardar.Location = new Point(513, 299);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(169, 133);
-            btnGuardar.TabIndex = 13;
+            btnGuardar.TabIndex = 0;
             btnGuardar.Text = "GUARDAR";
             btnGuardar.UseVisualStyleBackColor = false;
             btnGuardar.Click += btnGuardar_Click;
@@ -180,7 +180,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(825, 470);
             ControlBox = false;
             Controls.Add(btnGuardar);
             Controls.Add(txtLegajoAlumno);
@@ -196,6 +196,7 @@
             Controls.Add(txtRelacionConAlumno);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmAlta";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Alta";
             Load += frmAlta_Load;
             ResumeLayout(false);
