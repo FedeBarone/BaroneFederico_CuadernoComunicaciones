@@ -41,6 +41,7 @@
             txtGradoAlumno = new TextBox();
             txtLegajoAlumno = new TextBox();
             btnGuardar = new Button();
+            btnCancelar = new Button();
             SuspendLayout();
             // 
             // txtRelacionConAlumno
@@ -107,7 +108,7 @@
             // lblAlta
             // 
             lblAlta.AutoSize = true;
-            lblAlta.BackColor = SystemColors.HotTrack;
+            lblAlta.BackColor = SystemColors.ActiveCaption;
             lblAlta.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point);
             lblAlta.ForeColor = SystemColors.ActiveCaptionText;
             lblAlta.Location = new Point(484, 9);
@@ -120,7 +121,7 @@
             // lblPadresOTutor
             // 
             lblPadresOTutor.AutoSize = true;
-            lblPadresOTutor.BackColor = SystemColors.HotTrack;
+            lblPadresOTutor.BackColor = SystemColors.ActiveCaption;
             lblPadresOTutor.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             lblPadresOTutor.ForeColor = SystemColors.ActiveCaptionText;
             lblPadresOTutor.Location = new Point(12, 9);
@@ -132,7 +133,7 @@
             // lblDatosAlumno
             // 
             lblDatosAlumno.AutoSize = true;
-            lblDatosAlumno.BackColor = SystemColors.HotTrack;
+            lblDatosAlumno.BackColor = SystemColors.ActiveCaption;
             lblDatosAlumno.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             lblDatosAlumno.ForeColor = SystemColors.ActiveCaptionText;
             lblDatosAlumno.Location = new Point(12, 272);
@@ -163,16 +164,29 @@
             // 
             // btnGuardar
             // 
-            btnGuardar.BackColor = SystemColors.HotTrack;
+            btnGuardar.BackColor = SystemColors.ActiveCaption;
             btnGuardar.FlatStyle = FlatStyle.Popup;
             btnGuardar.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            btnGuardar.Location = new Point(513, 299);
+            btnGuardar.Location = new Point(439, 318);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(169, 133);
+            btnGuardar.Size = new Size(161, 74);
             btnGuardar.TabIndex = 0;
             btnGuardar.Text = "GUARDAR";
             btnGuardar.UseVisualStyleBackColor = false;
             btnGuardar.Click += btnGuardar_Click;
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.BackColor = SystemColors.ActiveCaption;
+            btnCancelar.FlatStyle = FlatStyle.Popup;
+            btnCancelar.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCancelar.Location = new Point(632, 318);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(158, 74);
+            btnCancelar.TabIndex = 13;
+            btnCancelar.Text = "CANCELAR";
+            btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // frmAlta
             // 
@@ -182,6 +196,7 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(825, 470);
             ControlBox = false;
+            Controls.Add(btnCancelar);
             Controls.Add(btnGuardar);
             Controls.Add(txtLegajoAlumno);
             Controls.Add(txtGradoAlumno);
@@ -217,5 +232,6 @@
         private TextBox txtGradoAlumno;
         private TextBox txtLegajoAlumno;
         private Button btnGuardar;
+        private Button btnCancelar;
     }
 }

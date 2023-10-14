@@ -33,7 +33,6 @@
             txtClave = new TextBox();
             btnIngresar = new Button();
             btnCerrar = new Button();
-            btnCancelar = new Button();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
@@ -70,7 +69,7 @@
             btnIngresar.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             btnIngresar.Location = new Point(290, 263);
             btnIngresar.Name = "btnIngresar";
-            btnIngresar.Size = new Size(169, 73);
+            btnIngresar.Size = new Size(169, 153);
             btnIngresar.TabIndex = 0;
             btnIngresar.Text = "INGRESAR";
             btnIngresar.UseVisualStyleBackColor = false;
@@ -90,19 +89,6 @@
             btnCerrar.TabIndex = 3;
             btnCerrar.UseVisualStyleBackColor = false;
             btnCerrar.Click += btnCerrar_Click;
-            // 
-            // btnCancelar
-            // 
-            btnCancelar.BackColor = SystemColors.ActiveCaption;
-            btnCancelar.FlatStyle = FlatStyle.Popup;
-            btnCancelar.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            btnCancelar.Location = new Point(290, 365);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(169, 73);
-            btnCancelar.TabIndex = 4;
-            btnCancelar.Text = "CANCELAR";
-            btnCancelar.UseVisualStyleBackColor = false;
-            btnCancelar.Click += btnCancelar_Click;
             // 
             // pictureBox1
             // 
@@ -147,7 +133,6 @@
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
-            Controls.Add(btnCancelar);
             Controls.Add(btnCerrar);
             Controls.Add(btnIngresar);
             Controls.Add(txtClave);
@@ -173,7 +158,6 @@
         private TextBox txtClave;
         private Button btnIngresar;
         private Button btnCerrar;
-        private Button btnCancelar;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;

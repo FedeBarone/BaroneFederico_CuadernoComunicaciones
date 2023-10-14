@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,11 +16,16 @@ namespace Interfaz
     public partial class MenuPrincipal : Form
     {
         private Usuario usuario;
-        Form formulario;
+        frmAlta formulario;
+        List<Familia> nombresIngresados;
         public MenuPrincipal(Usuario usuario)
         {
             InitializeComponent();
             this.usuario = usuario;
+
+            this.formulario = null;
+
+            nombresIngresados = new List<Familia>();
 
             ConfigurarInterfazSegunRol();
         }
@@ -55,17 +61,38 @@ namespace Interfaz
         private void altaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.formulario = new frmAlta();
-            
-            this.formulario.MdiParent = this;
+
+            //this.formulario.MdiParent = this;
             this.picInicio.Visible = false;
 
-            this.formulario.Show();
+            DialogResult resultado = this.formulario.ShowDialog();
+
+            if (resultado == DialogResult.OK)
+            {
+                nombresIngresados.Add(this.formulario.NombrePadreMadreOTutor);
+
+                StringBuilder sb = new StringBuilder();
+                foreach (Familia nombre in nombresIngresados)
+                {
+                    sb.AppendLine(nombre.ToString());
+                }
+                MessageBox.Show(sb.ToString());
+            }
+            else
+            {
+                MessageBox.Show($"cancelado");
+            }
+
 
         }
 
         private void iNICIOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.formulario.Close();
+            if (this.formulario != null)
+            {
+                this.formulario.Close();
+            }
+
             this.picInicio.Visible = true;
         }
     }

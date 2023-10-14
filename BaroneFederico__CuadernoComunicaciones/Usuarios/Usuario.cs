@@ -25,5 +25,10 @@ namespace Entidades.Usuarios
         {
             return this.usuario == usuario && this.clave == clave;
         }
+
+        public override string ToString()
+        {
+            return $"{this.nombre} {this.id} {this.usuario} {this.clave}";
+        }
     }
 }
