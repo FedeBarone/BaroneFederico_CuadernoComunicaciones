@@ -40,8 +40,13 @@
             mensajesEnviadosToolStripMenuItem = new ToolStripMenuItem();
             mensajesRecibidosToolStripMenuItem = new ToolStripMenuItem();
             nOTASToolStripMenuItem = new ToolStripMenuItem();
+            registroDeNotasToolStripMenuItem = new ToolStripMenuItem();
             iNFORMESToolStripMenuItem = new ToolStripMenuItem();
+            registroDeAsistenciaToolStripMenuItem = new ToolStripMenuItem();
+            progresoAcademicoToolStripMenuItem = new ToolStripMenuItem();
             eVENTOSToolStripMenuItem = new ToolStripMenuItem();
+            inscripcionAEventosToolStripMenuItem = new ToolStripMenuItem();
+            programacionDeEventosToolStripMenuItem = new ToolStripMenuItem();
             pictureBox1 = new PictureBox();
             flowLayoutPanel1 = new FlowLayoutPanel();
             menuStrip1.SuspendLayout();
@@ -85,22 +90,23 @@
             // 
             altaToolStripMenuItem.BackColor = SystemColors.ActiveCaption;
             altaToolStripMenuItem.Name = "altaToolStripMenuItem";
-            altaToolStripMenuItem.Size = new Size(219, 30);
-            altaToolStripMenuItem.Text = "Alta";
+            altaToolStripMenuItem.Size = new Size(224, 30);
+            altaToolStripMenuItem.Text = "Dar de alta";
+            altaToolStripMenuItem.Click += altaToolStripMenuItem_Click;
             // 
             // bajaToolStripMenuItem
             // 
             bajaToolStripMenuItem.BackColor = SystemColors.ActiveCaption;
             bajaToolStripMenuItem.Name = "bajaToolStripMenuItem";
-            bajaToolStripMenuItem.Size = new Size(219, 30);
-            bajaToolStripMenuItem.Text = "Baja";
+            bajaToolStripMenuItem.Size = new Size(224, 30);
+            bajaToolStripMenuItem.Text = "Dar de baja";
             // 
             // modificacionToolStripMenuItem
             // 
             modificacionToolStripMenuItem.BackColor = SystemColors.ActiveCaption;
             modificacionToolStripMenuItem.Name = "modificacionToolStripMenuItem";
-            modificacionToolStripMenuItem.Size = new Size(219, 30);
-            modificacionToolStripMenuItem.Text = "Modificacion";
+            modificacionToolStripMenuItem.Size = new Size(224, 30);
+            modificacionToolStripMenuItem.Text = "Modificar";
             // 
             // mENSAJERIAToolStripMenuItem
             // 
@@ -135,23 +141,57 @@
             // nOTASToolStripMenuItem
             // 
             nOTASToolStripMenuItem.BackColor = Color.Lime;
+            nOTASToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { registroDeNotasToolStripMenuItem });
             nOTASToolStripMenuItem.Name = "nOTASToolStripMenuItem";
             nOTASToolStripMenuItem.Size = new Size(102, 29);
             nOTASToolStripMenuItem.Text = "NOTAS";
             // 
+            // registroDeNotasToolStripMenuItem
+            // 
+            registroDeNotasToolStripMenuItem.BackColor = Color.FromArgb(0, 192, 0);
+            registroDeNotasToolStripMenuItem.Name = "registroDeNotasToolStripMenuItem";
+            registroDeNotasToolStripMenuItem.Size = new Size(266, 30);
+            registroDeNotasToolStripMenuItem.Text = "Registro de notas";
+            // 
             // iNFORMESToolStripMenuItem
             // 
             iNFORMESToolStripMenuItem.BackColor = SystemColors.HotTrack;
+            iNFORMESToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { registroDeAsistenciaToolStripMenuItem, progresoAcademicoToolStripMenuItem });
             iNFORMESToolStripMenuItem.Name = "iNFORMESToolStripMenuItem";
             iNFORMESToolStripMenuItem.Size = new Size(138, 29);
             iNFORMESToolStripMenuItem.Text = "INFORMES";
             // 
+            // registroDeAsistenciaToolStripMenuItem
+            // 
+            registroDeAsistenciaToolStripMenuItem.Name = "registroDeAsistenciaToolStripMenuItem";
+            registroDeAsistenciaToolStripMenuItem.Size = new Size(310, 30);
+            registroDeAsistenciaToolStripMenuItem.Text = "Registro de asistencia";
+            // 
+            // progresoAcademicoToolStripMenuItem
+            // 
+            progresoAcademicoToolStripMenuItem.Name = "progresoAcademicoToolStripMenuItem";
+            progresoAcademicoToolStripMenuItem.Size = new Size(310, 30);
+            progresoAcademicoToolStripMenuItem.Text = "Progreso academico";
+            // 
             // eVENTOSToolStripMenuItem
             // 
             eVENTOSToolStripMenuItem.BackColor = SystemColors.GradientInactiveCaption;
+            eVENTOSToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { inscripcionAEventosToolStripMenuItem, programacionDeEventosToolStripMenuItem });
             eVENTOSToolStripMenuItem.Name = "eVENTOSToolStripMenuItem";
             eVENTOSToolStripMenuItem.Size = new Size(130, 29);
             eVENTOSToolStripMenuItem.Text = "EVENTOS";
+            // 
+            // inscripcionAEventosToolStripMenuItem
+            // 
+            inscripcionAEventosToolStripMenuItem.Name = "inscripcionAEventosToolStripMenuItem";
+            inscripcionAEventosToolStripMenuItem.Size = new Size(343, 30);
+            inscripcionAEventosToolStripMenuItem.Text = "Inscripcion a eventos";
+            // 
+            // programacionDeEventosToolStripMenuItem
+            // 
+            programacionDeEventosToolStripMenuItem.Name = "programacionDeEventosToolStripMenuItem";
+            programacionDeEventosToolStripMenuItem.Size = new Size(343, 30);
+            programacionDeEventosToolStripMenuItem.Text = "Programacion de eventos";
             // 
             // pictureBox1
             // 
@@ -184,11 +224,11 @@
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            IsMdiContainer = true;
             MainMenuStrip = menuStrip1;
             Name = "MenuPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Menu Principal";
-            TransparencyKey = Color.Transparent;
             Load += MenuPrincipal_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
@@ -203,17 +243,22 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem iNICIOToolStripMenuItem;
         private ToolStripMenuItem iNFORMESToolStripMenuItem;
-        private ToolStripMenuItem mENSAJERIAToolStripMenuItem;
         private ToolStripMenuItem eVENTOSToolStripMenuItem;
         private ToolStripMenuItem nOTASToolStripMenuItem;
         private ToolStripMenuItem gESTIONARUSUARIOSToolStripMenuItem;
         private ToolStripMenuItem altaToolStripMenuItem;
         private ToolStripMenuItem bajaToolStripMenuItem;
         private ToolStripMenuItem modificacionToolStripMenuItem;
+        private PictureBox pictureBox1;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private ToolStripMenuItem mENSAJERIAToolStripMenuItem;
         private ToolStripMenuItem enviarMensajesToolStripMenuItem;
         private ToolStripMenuItem mensajesEnviadosToolStripMenuItem;
         private ToolStripMenuItem mensajesRecibidosToolStripMenuItem;
-        private PictureBox pictureBox1;
-        private FlowLayoutPanel flowLayoutPanel1;
+        private ToolStripMenuItem registroDeNotasToolStripMenuItem;
+        private ToolStripMenuItem registroDeAsistenciaToolStripMenuItem;
+        private ToolStripMenuItem progresoAcademicoToolStripMenuItem;
+        private ToolStripMenuItem inscripcionAEventosToolStripMenuItem;
+        private ToolStripMenuItem programacionDeEventosToolStripMenuItem;
     }
 }

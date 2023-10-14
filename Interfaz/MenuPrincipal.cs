@@ -51,6 +51,12 @@ namespace Interfaz
             }
         }
 
+        private void altaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAlta formAlta = new frmAlta();
 
+            formAlta.ShowDialog();
+
+        }
     }
 }

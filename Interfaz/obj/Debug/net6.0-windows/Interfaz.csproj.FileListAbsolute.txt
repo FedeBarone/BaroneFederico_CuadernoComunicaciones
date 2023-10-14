@@ -21,3 +21,4 @@ C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico_
 C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\bin\Debug\net6.0-windows\Entidades.dll
 C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\bin\Debug\net6.0-windows\Entidades.pdb
 C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\obj\Debug\net6.0-windows\Interfaz.csproj.CopyComplete
+C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\obj\Debug\net6.0-windows\Interfaz.frmAlta.resources
