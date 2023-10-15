@@ -45,9 +45,6 @@
             iNFORMESToolStripMenuItem = new ToolStripMenuItem();
             registroDeAsistenciaToolStripMenuItem = new ToolStripMenuItem();
             progresoAcademicoToolStripMenuItem = new ToolStripMenuItem();
-            eVENTOSToolStripMenuItem = new ToolStripMenuItem();
-            inscripcionAEventosToolStripMenuItem = new ToolStripMenuItem();
-            programacionDeEventosToolStripMenuItem = new ToolStripMenuItem();
             pictureBox1 = new PictureBox();
             flowLayoutPanel1 = new FlowLayoutPanel();
             picInicio = new PictureBox();
@@ -59,23 +56,23 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.BackColor = Color.Transparent;
+            menuStrip1.BackColor = Color.Teal;
             menuStrip1.BackgroundImageLayout = ImageLayout.None;
             menuStrip1.Dock = DockStyle.Bottom;
             menuStrip1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { iNICIOToolStripMenuItem, gESTIONARUSUARIOSToolStripMenuItem, mENSAJERIAToolStripMenuItem, nOTASToolStripMenuItem, iNFORMESToolStripMenuItem, eVENTOSToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { iNICIOToolStripMenuItem, gESTIONARUSUARIOSToolStripMenuItem, mENSAJERIAToolStripMenuItem, nOTASToolStripMenuItem, iNFORMESToolStripMenuItem });
             menuStrip1.LayoutStyle = ToolStripLayoutStyle.HorizontalStackWithOverflow;
             menuStrip1.Location = new Point(0, 482);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(905, 33);
+            menuStrip1.Size = new Size(777, 33);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             menuStrip1.ItemClicked += menuStrip1_ItemClicked;
             // 
             // iNICIOToolStripMenuItem
             // 
-            iNICIOToolStripMenuItem.BackColor = Color.Teal;
+            iNICIOToolStripMenuItem.BackColor = Color.Honeydew;
             iNICIOToolStripMenuItem.Name = "iNICIOToolStripMenuItem";
             iNICIOToolStripMenuItem.Size = new Size(92, 29);
             iNICIOToolStripMenuItem.Text = "INICIO";
@@ -137,6 +134,7 @@
             enviarMensajesToolStripMenuItem.Name = "enviarMensajesToolStripMenuItem";
             enviarMensajesToolStripMenuItem.Size = new Size(284, 30);
             enviarMensajesToolStripMenuItem.Text = "Enviar mensajes";
+            enviarMensajesToolStripMenuItem.Click += enviarMensajesToolStripMenuItem_Click;
             // 
             // mensajesEnviadosToolStripMenuItem
             // 
@@ -177,42 +175,24 @@
             // 
             // registroDeAsistenciaToolStripMenuItem
             // 
+            registroDeAsistenciaToolStripMenuItem.BackColor = SystemColors.HotTrack;
             registroDeAsistenciaToolStripMenuItem.Name = "registroDeAsistenciaToolStripMenuItem";
             registroDeAsistenciaToolStripMenuItem.Size = new Size(310, 30);
             registroDeAsistenciaToolStripMenuItem.Text = "Registro de asistencia";
             // 
             // progresoAcademicoToolStripMenuItem
             // 
+            progresoAcademicoToolStripMenuItem.BackColor = SystemColors.HotTrack;
             progresoAcademicoToolStripMenuItem.Name = "progresoAcademicoToolStripMenuItem";
             progresoAcademicoToolStripMenuItem.Size = new Size(310, 30);
             progresoAcademicoToolStripMenuItem.Text = "Progreso academico";
-            // 
-            // eVENTOSToolStripMenuItem
-            // 
-            eVENTOSToolStripMenuItem.BackColor = SystemColors.GradientInactiveCaption;
-            eVENTOSToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { inscripcionAEventosToolStripMenuItem, programacionDeEventosToolStripMenuItem });
-            eVENTOSToolStripMenuItem.Name = "eVENTOSToolStripMenuItem";
-            eVENTOSToolStripMenuItem.Size = new Size(130, 29);
-            eVENTOSToolStripMenuItem.Text = "EVENTOS";
-            // 
-            // inscripcionAEventosToolStripMenuItem
-            // 
-            inscripcionAEventosToolStripMenuItem.Name = "inscripcionAEventosToolStripMenuItem";
-            inscripcionAEventosToolStripMenuItem.Size = new Size(343, 30);
-            inscripcionAEventosToolStripMenuItem.Text = "Inscripcion a eventos";
-            // 
-            // programacionDeEventosToolStripMenuItem
-            // 
-            programacionDeEventosToolStripMenuItem.Name = "programacionDeEventosToolStripMenuItem";
-            programacionDeEventosToolStripMenuItem.Size = new Size(343, 30);
-            programacionDeEventosToolStripMenuItem.Text = "Programacion de eventos";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(3, 3);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(81, 61);
+            pictureBox1.Size = new Size(84, 61);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -221,9 +201,9 @@
             // 
             flowLayoutPanel1.BackColor = Color.Teal;
             flowLayoutPanel1.Controls.Add(pictureBox1);
-            flowLayoutPanel1.Location = new Point(818, 1);
+            flowLayoutPanel1.Location = new Point(690, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(87, 478);
+            flowLayoutPanel1.Size = new Size(87, 479);
             flowLayoutPanel1.TabIndex = 2;
             // 
             // picInicio
@@ -231,7 +211,7 @@
             picInicio.Image = (Image)resources.GetObject("picInicio.Image");
             picInicio.Location = new Point(0, 0);
             picInicio.Name = "picInicio";
-            picInicio.Size = new Size(823, 479);
+            picInicio.Size = new Size(691, 479);
             picInicio.SizeMode = PictureBoxSizeMode.StretchImage;
             picInicio.TabIndex = 4;
             picInicio.TabStop = false;
@@ -242,7 +222,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(905, 515);
+            ClientSize = new Size(777, 515);
             ControlBox = false;
             Controls.Add(picInicio);
             Controls.Add(flowLayoutPanel1);
@@ -269,7 +249,6 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem iNICIOToolStripMenuItem;
         private ToolStripMenuItem iNFORMESToolStripMenuItem;
-        private ToolStripMenuItem eVENTOSToolStripMenuItem;
         private ToolStripMenuItem nOTASToolStripMenuItem;
         private ToolStripMenuItem gESTIONARUSUARIOSToolStripMenuItem;
         private ToolStripMenuItem altaToolStripMenuItem;
@@ -284,8 +263,6 @@
         private ToolStripMenuItem registroDeNotasToolStripMenuItem;
         private ToolStripMenuItem registroDeAsistenciaToolStripMenuItem;
         private ToolStripMenuItem progresoAcademicoToolStripMenuItem;
-        private ToolStripMenuItem inscripcionAEventosToolStripMenuItem;
-        private ToolStripMenuItem programacionDeEventosToolStripMenuItem;
         private PictureBox picInicio;
         private ToolStripMenuItem verUsuariosToolStripMenuItem;
     }

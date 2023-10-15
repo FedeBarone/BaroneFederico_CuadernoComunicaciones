@@ -171,5 +171,11 @@ namespace Interfaz
                 }
             }
         }
+
+        private void enviarMensajesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEnvioMensaje frmEnvioMensaje = new frmEnvioMensaje();
+            frmEnvioMensaje.ShowDialog();
+        }
     }
 }
