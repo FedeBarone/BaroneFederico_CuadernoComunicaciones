@@ -35,6 +35,7 @@
             altaToolStripMenuItem = new ToolStripMenuItem();
             bajaToolStripMenuItem = new ToolStripMenuItem();
             modificacionToolStripMenuItem = new ToolStripMenuItem();
+            verUsuariosToolStripMenuItem = new ToolStripMenuItem();
             mENSAJERIAToolStripMenuItem = new ToolStripMenuItem();
             enviarMensajesToolStripMenuItem = new ToolStripMenuItem();
             mensajesEnviadosToolStripMenuItem = new ToolStripMenuItem();
@@ -50,7 +51,6 @@
             pictureBox1 = new PictureBox();
             flowLayoutPanel1 = new FlowLayoutPanel();
             picInicio = new PictureBox();
-            verUsuariosToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             flowLayoutPanel1.SuspendLayout();
@@ -94,7 +94,7 @@
             // 
             altaToolStripMenuItem.BackColor = SystemColors.ActiveCaption;
             altaToolStripMenuItem.Name = "altaToolStripMenuItem";
-            altaToolStripMenuItem.Size = new Size(220, 30);
+            altaToolStripMenuItem.Size = new Size(224, 30);
             altaToolStripMenuItem.Text = "Dar de alta";
             altaToolStripMenuItem.Click += altaToolStripMenuItem_Click;
             // 
@@ -102,15 +102,24 @@
             // 
             bajaToolStripMenuItem.BackColor = SystemColors.ActiveCaption;
             bajaToolStripMenuItem.Name = "bajaToolStripMenuItem";
-            bajaToolStripMenuItem.Size = new Size(220, 30);
+            bajaToolStripMenuItem.Size = new Size(224, 30);
             bajaToolStripMenuItem.Text = "Dar de baja";
+            bajaToolStripMenuItem.Click += bajaToolStripMenuItem_Click;
             // 
             // modificacionToolStripMenuItem
             // 
             modificacionToolStripMenuItem.BackColor = SystemColors.ActiveCaption;
             modificacionToolStripMenuItem.Name = "modificacionToolStripMenuItem";
-            modificacionToolStripMenuItem.Size = new Size(220, 30);
+            modificacionToolStripMenuItem.Size = new Size(224, 30);
             modificacionToolStripMenuItem.Text = "Modificar";
+            // 
+            // verUsuariosToolStripMenuItem
+            // 
+            verUsuariosToolStripMenuItem.BackColor = SystemColors.ActiveCaption;
+            verUsuariosToolStripMenuItem.Name = "verUsuariosToolStripMenuItem";
+            verUsuariosToolStripMenuItem.Size = new Size(224, 30);
+            verUsuariosToolStripMenuItem.Text = "Ver usuarios";
+            verUsuariosToolStripMenuItem.Click += verUsuariosToolStripMenuItem_Click;
             // 
             // mENSAJERIAToolStripMenuItem
             // 
@@ -225,13 +234,6 @@
             picInicio.SizeMode = PictureBoxSizeMode.StretchImage;
             picInicio.TabIndex = 4;
             picInicio.TabStop = false;
-            // 
-            // verUsuariosToolStripMenuItem
-            // 
-            verUsuariosToolStripMenuItem.BackColor = SystemColors.ActiveCaption;
-            verUsuariosToolStripMenuItem.Name = "verUsuariosToolStripMenuItem";
-            verUsuariosToolStripMenuItem.Size = new Size(220, 30);
-            verUsuariosToolStripMenuItem.Text = "Ver usuarios";
             // 
             // MenuPrincipal
             // 

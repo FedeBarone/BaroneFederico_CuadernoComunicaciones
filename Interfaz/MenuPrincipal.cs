@@ -61,8 +61,6 @@ namespace Interfaz
         private void altaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.formulario = new frmAlta();
-
-            //this.formulario.MdiParent = this;
             this.picInicio.Visible = false;
 
             DialogResult resultado = this.formulario.ShowDialog();
@@ -94,6 +92,21 @@ namespace Interfaz
             }
 
             this.picInicio.Visible = true;
+        }
+
+        private void verUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VistaUsuarios vistaUsuarios = new VistaUsuarios(nombresIngresados);
+            vistaUsuarios.MdiParent = this;
+            vistaUsuarios.Show();
+            this.picInicio.Visible = false;
+
+        }
+
+        private void bajaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+
         }
     }
 }
