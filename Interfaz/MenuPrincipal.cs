@@ -18,7 +18,7 @@ namespace Interfaz
         private Usuario usuario;
         frmAlta formulario;
         List<Familia> nombresIngresados;
-     
+
         public MenuPrincipal(Usuario usuario)
         {
             InitializeComponent();
@@ -131,6 +131,44 @@ namespace Interfaz
                 dgv.DataSource = nombresIngresados;
 
                 MessageBox.Show($"Usuario {usuarioBaja.Nombre} ha sido dado de baja.");
+            }
+        }
+
+        private void modificacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (nombresIngresados.Count == 0)
+            {
+                MessageBox.Show("No hay usuarios para modificar.");
+                return;
+            }
+
+            frmSeleccionModificacion formularioSeleccion = new frmSeleccionModificacion(nombresIngresados);
+
+            DialogResult resultadoSeleccion = formularioSeleccion.ShowDialog();
+
+            if (resultadoSeleccion == DialogResult.OK)
+            {
+                Familia usuarioSeleccionado = formularioSeleccion.UsuarioSeleccionado;
+
+                frmModificacion formularioModificacion = new frmModificacion(usuarioSeleccionado);
+
+                DialogResult resultadoModificacion = formularioModificacion.ShowDialog();
+
+                if (resultadoModificacion == DialogResult.OK)
+                {
+                    int indiceUsuario = nombresIngresados.IndexOf(usuarioSeleccionado);
+                    nombresIngresados[indiceUsuario] = formularioModificacion.UsuarioModificado;
+
+                    VistaUsuarios vistaUsuarios = new VistaUsuarios(nombresIngresados);
+                    if (vistaUsuarios != null)
+                    {
+                        DataGridView dgv = vistaUsuarios.GetDataGridView();
+                        dgv.DataSource = null;
+                        dgv.DataSource = nombresIngresados;
+                    }
+
+                    MessageBox.Show($"Usuario {usuarioSeleccionado.Nombre} ha sido modificado.");
+                }
             }
         }
     }

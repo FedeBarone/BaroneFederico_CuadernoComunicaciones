@@ -112,6 +112,7 @@
             modificacionToolStripMenuItem.Name = "modificacionToolStripMenuItem";
             modificacionToolStripMenuItem.Size = new Size(224, 30);
             modificacionToolStripMenuItem.Text = "Modificar";
+            modificacionToolStripMenuItem.Click += modificacionToolStripMenuItem_Click;
             // 
             // verUsuariosToolStripMenuItem
             // 

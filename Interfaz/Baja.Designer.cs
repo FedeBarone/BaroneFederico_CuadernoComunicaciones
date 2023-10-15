@@ -49,7 +49,7 @@
             btnAceptarBaja.BackColor = SystemColors.ActiveCaption;
             btnAceptarBaja.FlatStyle = FlatStyle.Popup;
             btnAceptarBaja.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAceptarBaja.Location = new Point(219, 347);
+            btnAceptarBaja.Location = new Point(231, 347);
             btnAceptarBaja.Name = "btnAceptarBaja";
             btnAceptarBaja.Size = new Size(161, 74);
             btnAceptarBaja.TabIndex = 1;
@@ -62,7 +62,7 @@
             btnCancelarBaja.BackColor = SystemColors.ActiveCaption;
             btnCancelarBaja.FlatStyle = FlatStyle.Popup;
             btnCancelarBaja.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            btnCancelarBaja.Location = new Point(417, 347);
+            btnCancelarBaja.Location = new Point(400, 347);
             btnCancelarBaja.Name = "btnCancelarBaja";
             btnCancelarBaja.Size = new Size(158, 74);
             btnCancelarBaja.TabIndex = 14;
