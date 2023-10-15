@@ -4,6 +4,9 @@
     <Compile Update="Alta.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Baja.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>

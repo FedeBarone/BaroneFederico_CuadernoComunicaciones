@@ -13,6 +13,7 @@ namespace Interfaz
 {
     public partial class VistaUsuarios : Form
     {
+        
         List<Familia> familias;
 
         public VistaUsuarios(List<Familia> familias)
@@ -33,5 +34,11 @@ namespace Interfaz
             this.dtgVistaUsuarios.DataSource = this.familias;
 
         }
+
+        public DataGridView GetDataGridView()
+        {
+            return dtgVistaUsuarios;
+        }
+
     }
 }

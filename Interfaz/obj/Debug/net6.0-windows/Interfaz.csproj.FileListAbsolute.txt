@@ -23,3 +23,4 @@ C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico_
 C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\obj\Debug\net6.0-windows\Interfaz.csproj.CopyComplete
 C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\obj\Debug\net6.0-windows\Interfaz.frmAlta.resources
 C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\obj\Debug\net6.0-windows\Interfaz.VistaUsuarios.resources
+C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\obj\Debug\net6.0-windows\Interfaz.frmBaja.resources

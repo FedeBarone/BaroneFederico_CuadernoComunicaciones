@@ -18,6 +18,7 @@ namespace Interfaz
         private Usuario usuario;
         frmAlta formulario;
         List<Familia> nombresIngresados;
+     
         public MenuPrincipal(Usuario usuario)
         {
             InitializeComponent();
@@ -105,8 +106,32 @@ namespace Interfaz
 
         private void bajaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            if (nombresIngresados.Count == 0)
+            {
+                MessageBox.Show("No hay usuarios para dar de baja.");
+                return;
+            }
 
+            frmBaja frmBaja = new frmBaja(nombresIngresados);
+
+            if (frmBaja.ShowDialog() == DialogResult.OK)
+            {
+                Familia usuarioBaja = frmBaja.UsuarioSeleccionado;
+
+                nombresIngresados.Remove(usuarioBaja);
+
+
+                VistaUsuarios vistaUsuarios = new VistaUsuarios(nombresIngresados);
+                vistaUsuarios.MdiParent = this;
+                vistaUsuarios.Show();
+                this.picInicio.Visible = false;
+
+                DataGridView dgv = vistaUsuarios.GetDataGridView();
+                dgv.DataSource = null;
+                dgv.DataSource = nombresIngresados;
+
+                MessageBox.Show($"Usuario {usuarioBaja.Nombre} ha sido dado de baja.");
+            }
         }
     }
 }
