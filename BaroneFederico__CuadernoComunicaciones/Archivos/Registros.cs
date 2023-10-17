@@ -3,39 +3,58 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace Entidades.Archivos
 {
-    //TIENEN QUE SER ARCHIVOS, PERO HARDCODEO PARA PROBAR. HAY QUE MODIFICAR
     public static class Registros
     {
-        static List<Usuario> RegistroUsuarios;
+        #region Atributos
+        public static List<Usuario> RegistroUsuarios;
+        public static List<Familia> familias;
+        #endregion
 
+        #region Constructor
         static Registros()
         {
             RegistroUsuarios = new List<Usuario>();
-            HardCodeUsuarios();
+            familias = new List<Familia>();
+            HardCodearPreceptoras();
 
         }
+        #endregion
 
-        private static void HardCodeUsuarios()
+        #region Propiedades
+        public static List<Usuario> RegistroUsuarios1 { get => RegistroUsuarios; set => RegistroUsuarios = value; }
+        #endregion
+
+        #region Metodos
+        private static void HardCodearPreceptoras()
         {
-            RegistroUsuarios.Add(new Familia("Ryu", 1, "Ryu23", "ninja"));
-            RegistroUsuarios.Add(new Familia("Jin", 2, "Jin45", "tekken"));
-            RegistroUsuarios.Add(new Preceptora("Romina", 3, "Romina5", "rt"));
-            RegistroUsuarios.Add(new Preceptora("Marcel", 4, "Marcel2", "Ml"));
+            RegistroUsuarios.Add(new Preceptora( 3, "Romina", "Romina5", "rt"));
+            RegistroUsuarios.Add(new Preceptora(4, "Marcela", "Marcel2", "Ml"));
         }
 
         public static Usuario ObtenerUsuarioValido(string usuario, string clave)
         {
+            //Familia familias = leerJson();
+            //foreach (Usuario Usuario in familias)
+            //{
+            //    if(Usuario.ComprobarUsuario(usuario, clave))
+            //        return Usuario;
+            //}
+            //return null;
+
             foreach (Usuario Usuario in RegistroUsuarios)
             {
-                if(Usuario.ComprobarUsuario(usuario, clave))
+                if (Usuario.ComprobarUsuario(usuario, clave))
                     return Usuario;
             }
             return null;
 
         }
+        #endregion
     }
+    
 }

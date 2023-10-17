@@ -13,7 +13,10 @@ namespace Interfaz
 {
     public partial class frmSeleccionModificacion : Form
     {
-        public Familia UsuarioSeleccionado { get; private set; }
+        #region Atributos
+        #endregion
+
+        #region Constructor
         public frmSeleccionModificacion(List<Familia> usuarios)
         {
             InitializeComponent();
@@ -21,7 +24,13 @@ namespace Interfaz
             lstSeleccionModificacion.DataSource = usuarios;
             lstSeleccionModificacion.DisplayMember = "Nombre";
         }
+        #endregion
 
+        #region Propiedades
+        public Familia UsuarioSeleccionado { get; private set; }
+        #endregion
+
+        #region Metodos
         private void btnAceptarSeleccionModificacion_Click(object sender, EventArgs e)
         {
             UsuarioSeleccionado = (Familia)lstSeleccionModificacion.SelectedItem;
@@ -37,5 +46,6 @@ namespace Interfaz
             Close();
 
         }
+        #endregion
     }
 }

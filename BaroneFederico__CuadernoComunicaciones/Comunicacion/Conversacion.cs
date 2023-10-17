@@ -9,21 +9,33 @@ namespace Entidades.Comunicacion
 {
     public class Conversacion
     {
-        public Usuario Usuario1 { get; private set; }
-        public Usuario Usuario2 { get; private set; }
-        public List<Mensaje> Mensajes { get; private set; }
+        #region Atributos
+        private Usuario preceptora;
+        private Usuario familia;
+        private List<Mensaje> mensajes;
+        #endregion
 
-        public Conversacion(Usuario usuario1, Usuario usuario2)
+        #region Constructor
+        public Conversacion(Usuario preceptora, Usuario familia)
         {
-            Usuario1 = usuario1;
-            Usuario2 = usuario2;
-            Mensajes = new List<Mensaje>();
+            this.preceptora = preceptora;
+            this.familia = familia;
+            this.mensajes = new List<Mensaje>();
         }
+        #endregion
 
+        #region Propiedades
+        public Usuario Preceptora { get => preceptora; set => preceptora = value; }
+        public Usuario Familia { get => familia; set => familia = value; }
+        public List<Mensaje> Mensajes { get => mensajes; set => mensajes = value; }
+        #endregion
+
+        #region Metodos
         public void EnviarMensaje(Usuario remitente, Usuario destinatario, string contenido)
         {
             Mensaje mensaje = new Mensaje(remitente, destinatario, contenido);
             Mensajes.Add(mensaje);
         }
+        #endregion
     }
 }

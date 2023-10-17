@@ -1,4 +1,6 @@
-﻿namespace Interfaz
+﻿using System.Windows.Forms;
+using System.Drawing;
+namespace Interfaz
 {
     partial class MenuPrincipal
     {
@@ -68,7 +70,6 @@
             menuStrip1.Size = new Size(777, 33);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
-            menuStrip1.ItemClicked += menuStrip1_ItemClicked;
             // 
             // iNICIOToolStripMenuItem
             // 
@@ -91,7 +92,7 @@
             // 
             altaToolStripMenuItem.BackColor = SystemColors.ActiveCaption;
             altaToolStripMenuItem.Name = "altaToolStripMenuItem";
-            altaToolStripMenuItem.Size = new Size(224, 30);
+            altaToolStripMenuItem.Size = new Size(220, 30);
             altaToolStripMenuItem.Text = "Dar de alta";
             altaToolStripMenuItem.Click += altaToolStripMenuItem_Click;
             // 
@@ -99,7 +100,7 @@
             // 
             bajaToolStripMenuItem.BackColor = SystemColors.ActiveCaption;
             bajaToolStripMenuItem.Name = "bajaToolStripMenuItem";
-            bajaToolStripMenuItem.Size = new Size(224, 30);
+            bajaToolStripMenuItem.Size = new Size(220, 30);
             bajaToolStripMenuItem.Text = "Dar de baja";
             bajaToolStripMenuItem.Click += bajaToolStripMenuItem_Click;
             // 
@@ -107,7 +108,7 @@
             // 
             modificacionToolStripMenuItem.BackColor = SystemColors.ActiveCaption;
             modificacionToolStripMenuItem.Name = "modificacionToolStripMenuItem";
-            modificacionToolStripMenuItem.Size = new Size(224, 30);
+            modificacionToolStripMenuItem.Size = new Size(220, 30);
             modificacionToolStripMenuItem.Text = "Modificar";
             modificacionToolStripMenuItem.Click += modificacionToolStripMenuItem_Click;
             // 
@@ -115,7 +116,7 @@
             // 
             verUsuariosToolStripMenuItem.BackColor = SystemColors.ActiveCaption;
             verUsuariosToolStripMenuItem.Name = "verUsuariosToolStripMenuItem";
-            verUsuariosToolStripMenuItem.Size = new Size(224, 30);
+            verUsuariosToolStripMenuItem.Size = new Size(220, 30);
             verUsuariosToolStripMenuItem.Text = "Ver usuarios";
             verUsuariosToolStripMenuItem.Click += verUsuariosToolStripMenuItem_Click;
             // 
@@ -149,6 +150,7 @@
             mensajesRecibidosToolStripMenuItem.Name = "mensajesRecibidosToolStripMenuItem";
             mensajesRecibidosToolStripMenuItem.Size = new Size(284, 30);
             mensajesRecibidosToolStripMenuItem.Text = "Mensajes recibidos";
+            mensajesRecibidosToolStripMenuItem.Click += mensajesRecibidosToolStripMenuItem_Click;
             // 
             // nOTASToolStripMenuItem
             // 

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "jea8Rgbdt+lzD6vByuO5enfm9QK/Z4O6lT7iLOK2m0iIIcbiXpJxf5UyveLA869r48uczvuvCGCspGSHPa5gxg==",
+  "dgSpecHash": "PycgQIhgOBBC0WKWA/KCibt/uWZJW4rEsbkPgzwBN95OlVzTpaYs0oAt1jntJsBPB7KSzuTQqLW1NcLNSE5mHw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Federico\\Desktop\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\BaroneFederico__CuadernoComunicaciones\\Entidades.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Federico\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

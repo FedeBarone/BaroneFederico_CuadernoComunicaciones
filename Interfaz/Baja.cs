@@ -13,9 +13,12 @@ namespace Interfaz
 {
     public partial class frmBaja : Form
     {
+        #region Atributos
+        private Familia usuarioSeleccionado;
         private List<Familia> usuariosDisponibles;
+        #endregion
 
-        public Familia UsuarioSeleccionado { get; private set; }
+        #region Constructor
         public frmBaja(List<Familia> usuarios)
         {
             InitializeComponent();
@@ -23,7 +26,13 @@ namespace Interfaz
             lstBaja.DataSource = usuariosDisponibles;
             lstBaja.DisplayMember = "Nombre";
         }
+        #endregion
 
+        #region Propiedades
+        public Familia UsuarioSeleccionado { get => usuarioSeleccionado;}
+        #endregion
+
+        #region Metodos
         private void frmBaja_Load(object sender, EventArgs e)
         {
 
@@ -31,7 +40,7 @@ namespace Interfaz
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            UsuarioSeleccionado = (Familia)lstBaja.SelectedItem;
+            usuarioSeleccionado = (Familia)lstBaja.SelectedItem;
             DialogResult = DialogResult.OK;
             Close();
 
@@ -43,5 +52,6 @@ namespace Interfaz
             Close();
 
         }
+        #endregion
     }
 }

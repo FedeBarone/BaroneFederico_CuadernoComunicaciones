@@ -2,7 +2,7 @@
 using System.Drawing;
 namespace Interfaz
 {
-    partial class VistaUsuarios
+    partial class frmMensajesRecibidos
     {
         /// <summary>
         /// Required designer variable.
@@ -30,40 +30,37 @@ namespace Interfaz
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaUsuarios));
-            dtgVistaUsuarios = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dtgVistaUsuarios).BeginInit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMensajesRecibidos));
+            lstMensajesRecibidos = new ListBox();
             SuspendLayout();
             // 
-            // dtgVistaUsuarios
+            // lstMensajesRecibidos
             // 
-            dtgVistaUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgVistaUsuarios.Location = new Point(67, 12);
-            dtgVistaUsuarios.Name = "dtgVistaUsuarios";
-            dtgVistaUsuarios.RowHeadersWidth = 51;
-            dtgVistaUsuarios.RowTemplate.Height = 29;
-            dtgVistaUsuarios.Size = new Size(721, 402);
-            dtgVistaUsuarios.TabIndex = 0;
+            lstMensajesRecibidos.FormattingEnabled = true;
+            lstMensajesRecibidos.ItemHeight = 20;
+            lstMensajesRecibidos.Location = new Point(184, 50);
+            lstMensajesRecibidos.Name = "lstMensajesRecibidos";
+            lstMensajesRecibidos.Size = new Size(353, 304);
+            lstMensajesRecibidos.TabIndex = 0;
             // 
-            // VistaUsuarios
+            // frmMensajesRecibidos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(800, 450);
             ControlBox = false;
-            Controls.Add(dtgVistaUsuarios);
+            Controls.Add(lstMensajesRecibidos);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "VistaUsuarios";
+            Name = "frmMensajesRecibidos";
             StartPosition = FormStartPosition.CenterParent;
-            Text = "VistaUsuarios";
-            Load += VistaUsuarios_Load;
-            ((System.ComponentModel.ISupportInitialize)dtgVistaUsuarios).EndInit();
+            Text = "MensajesRecibidos";
+            Load += frmMensajesRecibidos_Load;
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dtgVistaUsuarios;
+        private ListBox lstMensajesRecibidos;
     }
 }

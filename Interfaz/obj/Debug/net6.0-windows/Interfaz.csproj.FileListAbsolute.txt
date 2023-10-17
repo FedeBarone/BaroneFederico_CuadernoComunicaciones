@@ -27,3 +27,5 @@ C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico_
 C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\obj\Debug\net6.0-windows\Interfaz.frmModificacion.resources
 C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\obj\Debug\net6.0-windows\Interfaz.frmSeleccionModificacion.resources
 C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\obj\Debug\net6.0-windows\Interfaz.frmEnvioMensaje.resources
+C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\obj\Debug\net6.0-windows\Interfaz.frmMensajesRecibidos.resources
+C:\Users\Federico\Desktop\BaroneFederico__CuadernoComunicaciones\BaroneFederico__CuadernoComunicaciones\Interfaz\bin\Debug\net6.0-windows\Newtonsoft.Json.dll

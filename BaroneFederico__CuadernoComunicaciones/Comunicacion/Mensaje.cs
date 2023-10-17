@@ -9,18 +9,30 @@ namespace Entidades.Comunicacion
 {
     public class Mensaje
     {
-        public Usuario Remitente { get; private set; }
-        public Usuario Destinatario { get; private set; }
-        public string Contenido{ get; private set; }
-        public DateTime FechaEnvio { get; private set; }
+        #region Atributos
+        private Usuario remitente;
+        private Usuario destinatario;
+        private string contenido;
+        private DateTime fechaEnvio;
+        #endregion
 
+        #region Constructor
         public Mensaje(Usuario remitente, Usuario destinatario, string contenido)
         {
-            Remitente = remitente;
-            Destinatario = destinatario;
-            Contenido = contenido;
-            FechaEnvio = DateTime.Now;
+            this.remitente = remitente;
+            this.destinatario = destinatario;
+            this.contenido = contenido;
+            this.fechaEnvio = DateTime.Now;
         }
+
+        #endregion
+
+        #region Propiedades
+        public Usuario Remitente { get => remitente; }
+        public Usuario Destinatario { get => destinatario;}
+        public string Contenido { get => contenido;}
+        public DateTime FechaEnvio { get => fechaEnvio;}
+        #endregion
 
     }
 }

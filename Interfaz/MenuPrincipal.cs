@@ -1,5 +1,6 @@
 ﻿using Entidades.Enumerados;
 using Entidades.Usuarios;
+using Entidades.Archivos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,10 +17,14 @@ namespace Interfaz
 {
     public partial class MenuPrincipal : Form
     {
+        #region Atributos
         private Usuario usuario;
         frmAlta formulario;
         List<Familia> nombresIngresados;
+        VistaUsuarios vistaUsuarios;
+        #endregion
 
+        #region Constructor
         public MenuPrincipal(Usuario usuario)
         {
             InitializeComponent();
@@ -30,14 +36,12 @@ namespace Interfaz
 
             ConfigurarInterfazSegunRol();
         }
+        #endregion
 
+        #region Metodos
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
+           nombresIngresados = Serializadora.LeerJson(@"C:\\Users\\Federico\\Desktop\\Clase_Sabado\\Familias.json");
 
         }
 
@@ -45,17 +49,11 @@ namespace Interfaz
         {
             if (usuario != null)
             {
-                if (usuario.Rol == Rol.Administrador)
+                if (usuario.Rol == Rol.UsuarioFinal)
                 {
-                    nOTASToolStripMenuItem.Visible = false;
+                    gESTIONARUSUARIOSToolStripMenuItem.Visible = false;
 
                 }
-                //else if (usuario.Rol == Rol.UsuarioFinal)
-                //{
-                //    iNFORMESToolStripMenuItem.Visible = false;
-                //    eVENTOSToolStripMenuItem.Visible = false;
-
-                //}
             }
         }
 
@@ -68,21 +66,15 @@ namespace Interfaz
 
             if (resultado == DialogResult.OK)
             {
-                nombresIngresados.Add(this.formulario.NombrePadreMadreOTutor);
+                nombresIngresados.Add(this.formulario.Familia);
+                Serializadora.EscribirJson(@"C:\\Users\\Federico\\Desktop\\Clase_Sabado\\Familias.json", nombresIngresados);
 
-                StringBuilder sb = new StringBuilder();
-                foreach (Familia nombre in nombresIngresados)
-                {
-                    sb.AppendLine(nombre.ToString());
-                }
-                MessageBox.Show(sb.ToString());
+                MessageBox.Show("ALTA EXITOSA!");
             }
             else
             {
                 MessageBox.Show($"cancelado");
             }
-
-
         }
 
         private void iNICIOToolStripMenuItem_Click(object sender, EventArgs e)
@@ -120,15 +112,7 @@ namespace Interfaz
 
                 nombresIngresados.Remove(usuarioBaja);
 
-
-                VistaUsuarios vistaUsuarios = new VistaUsuarios(nombresIngresados);
-                vistaUsuarios.MdiParent = this;
-                vistaUsuarios.Show();
-                this.picInicio.Visible = false;
-
-                DataGridView dgv = vistaUsuarios.GetDataGridView();
-                dgv.DataSource = null;
-                dgv.DataSource = nombresIngresados;
+                Serializadora.EscribirJson(@"C:\\Users\\Federico\\Desktop\\Clase_Sabado\\Familias.json", nombresIngresados);
 
                 MessageBox.Show($"Usuario {usuarioBaja.Nombre} ha sido dado de baja.");
             }
@@ -159,13 +143,10 @@ namespace Interfaz
                     int indiceUsuario = nombresIngresados.IndexOf(usuarioSeleccionado);
                     nombresIngresados[indiceUsuario] = formularioModificacion.UsuarioModificado;
 
-                    VistaUsuarios vistaUsuarios = new VistaUsuarios(nombresIngresados);
-                    if (vistaUsuarios != null)
-                    {
-                        DataGridView dgv = vistaUsuarios.GetDataGridView();
-                        dgv.DataSource = null;
-                        dgv.DataSource = nombresIngresados;
-                    }
+                    Serializadora.EscribirJson(@"C:\\Users\\Federico\\Desktop\\Clase_Sabado\\Familias.json", nombresIngresados);
+
+                    
+                    
 
                     MessageBox.Show($"Usuario {usuarioSeleccionado.Nombre} ha sido modificado.");
                 }
@@ -174,8 +155,15 @@ namespace Interfaz
 
         private void enviarMensajesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmEnvioMensaje frmEnvioMensaje = new frmEnvioMensaje();
+            frmEnvioMensaje frmEnvioMensaje = new frmEnvioMensaje((Preceptora)usuario, nombresIngresados);
             frmEnvioMensaje.ShowDialog();
         }
+        private void mensajesRecibidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMensajesRecibidos mensajesRecibidosForm = new frmMensajesRecibidos((Preceptora)usuario);
+            mensajesRecibidosForm.ShowDialog();
+
+        }
+        #endregion
     }
 }

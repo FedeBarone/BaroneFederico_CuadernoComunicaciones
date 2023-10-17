@@ -1,4 +1,6 @@
-﻿namespace Interfaz
+﻿using System.Windows.Forms;
+using System.Drawing;
+namespace Interfaz
 {
     partial class frmAlta
     {
@@ -53,7 +55,6 @@
             txtRelacionConAlumno.PlaceholderText = "Ingrese relacion con alumno";
             txtRelacionConAlumno.Size = new Size(325, 34);
             txtRelacionConAlumno.TabIndex = 2;
-            txtRelacionConAlumno.TextChanged += txtRelacionConAlumno_TextChanged;
             // 
             // txtNumeroCelular
             // 
@@ -116,7 +117,6 @@
             lblAlta.Size = new Size(230, 36);
             lblAlta.TabIndex = 8;
             lblAlta.Text = "Alta de usuario";
-            lblAlta.Click += label1_Click;
             // 
             // lblPadresOTutor
             // 

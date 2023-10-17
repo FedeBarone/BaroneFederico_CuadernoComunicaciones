@@ -1,4 +1,6 @@
-﻿namespace Interfaz
+﻿using System.Windows.Forms;
+using System.Drawing;
+namespace Interfaz
 {
     partial class frmEnvioMensaje
     {
@@ -64,6 +66,7 @@
             btnEnviar.TabIndex = 2;
             btnEnviar.Text = "ENVIAR";
             btnEnviar.UseVisualStyleBackColor = false;
+            btnEnviar.Click += btnEnviar_Click;
             // 
             // btnCancelarMensaje
             // 

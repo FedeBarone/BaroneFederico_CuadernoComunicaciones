@@ -13,32 +13,26 @@ namespace Interfaz
 {
     public partial class VistaUsuarios : Form
     {
-        
+        #region Atributos 
         List<Familia> familias;
+        #endregion
 
+        #region Constructor
         public VistaUsuarios(List<Familia> familias)
         {
             InitializeComponent();
             this.familias = familias;
         }
+        #endregion
+
+        #region Metodos
 
         private void VistaUsuarios_Load(object sender, EventArgs e)
         {
-            //this.familias.Add(new Familia("Kaio", 1, "Kaio34@outlook.com", "121", "Padre", "Kaio12", 6, 120));
-            //this.familias.Add(new Familia("Max", 2, "Max122@outlook.com", "234", "Padre", "Max14", 10, 121));
-            //this.familias.Add(new Familia("Fox", 3, "fox4@outlook.com", "789", "Padre", "Fox54", 11, 122));
-            //this.familias.Add(new Familia("Fede", 4, "fede234@outlook.com", "779", "Tutor", "Fede13", 12, 123));
-            //this.familias.Add(new Familia("Grey", 5, "Grey500@outlook.com", "987", "Padre", "Grey678", 14, 127));
-
             this.dtgVistaUsuarios.DataSource = null;
             this.dtgVistaUsuarios.DataSource = this.familias;
 
         }
-
-        public DataGridView GetDataGridView()
-        {
-            return dtgVistaUsuarios;
-        }
-
+        #endregion
     }
 }

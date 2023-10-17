@@ -1,4 +1,6 @@
-﻿namespace Interfaz
+﻿using System.Windows.Forms;
+using System.Drawing;
+namespace Interfaz
 {
     partial class VentanaEmergente
     {

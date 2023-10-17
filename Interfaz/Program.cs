@@ -1,3 +1,6 @@
+using System.Threading;
+using System.Windows.Forms;
+using System;
 namespace Interfaz
 {
     internal static class Program

@@ -4,6 +4,11 @@ using Entidades.Usuarios;
 using Interfaz.Herramientas;
 using Microsoft.VisualBasic.Logging;
 using System.Drawing;
+using System.Windows.Forms;
+using System;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Threading;
 
 namespace Interfaz
 {
@@ -65,9 +70,5 @@ namespace Interfaz
             return returnAux;
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -4,35 +4,43 @@ namespace Entidades.Usuarios
 {
     public abstract class Usuario
     {
+        #region Atributos
+        private int numLegajo;
         private string nombre;
-        private int id;
-        private string user;
+        private string dirCorreo;
         private string clave;
         private Rol rol;
+        #endregion
 
-        protected Usuario(string nombre, int id, string usuario, string clave, Rol rol)
+        #region Constructores
+        protected Usuario(int numLegajo, string nombre, string dirCorreo, string clave, Rol rol)
         {
             this.nombre = nombre;
-            this.id = id;
-            this.user = usuario;
+            this.numLegajo = numLegajo;
+            this.dirCorreo = dirCorreo;
             this.clave = clave;
             this.rol = rol;
         }
+        #endregion
 
-        public Rol Rol { get => rol; set => rol = value; }
+        #region Propiedades
+        public int NumLegajo { get => numLegajo; set => numLegajo = value; }
         public string Nombre { get => nombre; set => nombre = value; }
-        public int Id { get => id; set => id = value; }
-        public string User { get => user; set => user = value; }
+        public string DirCorreo { get => dirCorreo; set => dirCorreo = value; }
         public string Clave { get => clave; set => clave = value; }
+        public Rol Rol { get => rol; set => rol = value; }
+        #endregion
 
-        public bool ComprobarUsuario(string usuario, string clave)
+        #region Metodos
+        public bool ComprobarUsuario(string dirCorreo, string clave)
         {
-            return this.user == usuario && this.clave == clave;
+            return this.dirCorreo == dirCorreo && this.clave == clave;
         }
 
         public override string ToString()
         {
-            return $"{this.nombre} {this.id} {this.user} {this.clave}";
+            return $"{this.numLegajo} {this.nombre} {this.dirCorreo} {this.clave}";
         }
+        #endregion
     }
 }

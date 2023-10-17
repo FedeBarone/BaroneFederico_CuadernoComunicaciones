@@ -3,42 +3,74 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Entidades.Usuarios
 {
-    public class Familia : Usuario//tengo que ver si el nombre "familia" es el correcto
+    [Serializable]
+    public class Familia : Usuario
     {
-        private string relacionConAlumno;
+        #region Atributos
+        private string representanteLegal;
         private string nombreAlumno;
         private int gradoAlumno;
         private int numeroLegajoAlumno;
-        public Familia(string nombre, int id, string usuario, string clave) : base(nombre, id, usuario, 
-                                                                                    clave, Rol.UsuarioFinal)
+        #endregion
+
+        #region Constructores
+        [JsonConstructor]
+        public Familia() : base(0, "", "", "", Rol.UsuarioFinal)
         {
-       
+            this.representanteLegal = null;
+            this.nombreAlumno = null;
+            this.gradoAlumno = 0;
+            this.numeroLegajoAlumno = 0;
+
+        }
+        public Familia(int numLegajo, string nombre, string dirCorreo, string clave) : base(numLegajo, nombre, 
+                                                                           dirCorreo, clave, Rol.UsuarioFinal)
+        {
+                
         }
 
-        public Familia(string nombre, int id, string usuario, string clave, 
-                                        string relacionConAlumno, string nombreAlumno, 
-                                        int gradoAlumno, int legajoAlumno ) : this(nombre, id, usuario, clave)
+        public Familia(int numLegajo, string nombre, string dirCorreo, string clave,
+                                        string representanteLegal, string nombreAlumno, 
+                                        int gradoAlumno, int legajoAlumno ) : this(numLegajo, 
+                                                                       nombre, dirCorreo, clave)
                                                                                
         {
-            this.relacionConAlumno = relacionConAlumno;
+            this.representanteLegal = representanteLegal;
             this.nombreAlumno = nombreAlumno;
             this.gradoAlumno = gradoAlumno;
             this.numeroLegajoAlumno = legajoAlumno;
 
         }
+        #endregion
 
-        public override string ToString()
-        {
-            return $"{base.ToString()} {this.relacionConAlumno} {this.nombreAlumno} {this.gradoAlumno} {this.numeroLegajoAlumno}";
-        }
-
-        public string RelacionConAlumno { get => relacionConAlumno; set => relacionConAlumno = value; }
+        #region Propiedades
+        public string RepresentanteLegal { get => representanteLegal; set => representanteLegal = value; }
         public string NombreAlumno { get => nombreAlumno; set => nombreAlumno = value; }
         public int GradoAlumno { get => gradoAlumno; set => gradoAlumno = value; }
         public int NumeroLegajoAlumno { get => numeroLegajoAlumno; set => numeroLegajoAlumno = value; }
+        #endregion
+
+        #region Metodos
+        public override string ToString()
+        {
+            return $"{base.ToString()} {this.representanteLegal} {this.nombreAlumno} {this.gradoAlumno} {this.numeroLegajoAlumno}";
+        }
+
+        //public static bool operator ==(string destinatarioNombre, Familia familia)
+        //{
+        //    return familia.Nombre == destinatarioNombre;
+        //}
+
+        //public static bool operator !=(string destinatarioNombre, Familia familia)
+        //{
+        //    return !(familia.Nombre == destinatarioNombre);
+        //}
+        #endregion
+
     }
 }

@@ -13,37 +13,32 @@ namespace Interfaz
 {
     public partial class frmAlta : Form
     {
-        Familia nombrePadreMadreOTutor;
+        #region Atributos
+        Familia familia;
+        #endregion
 
-        public Familia NombrePadreMadreOTutor { get => nombrePadreMadreOTutor; }
-
+        #region Constructor
         public frmAlta()
         {
             InitializeComponent();
         }
+        #endregion
 
+        #region Propiedades
+        public Familia Familia { get => familia; }
+        #endregion
+
+        #region Metodos
         private void frmAlta_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtRelacionConAlumno_TextChanged(object sender, EventArgs e)
         {
 
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            string nombrePadreMadreOTutor = txtNombre.Text;
+            string nombreRepresentanteLegal = txtNombre.Text;
             string direccionCorreo = txtDirCorreo.Text;
-            int.TryParse(txtNumeroCelular.Text, out int numCelular);
-            int numeroCelular = numCelular;
-            string relacionConAlumno = txtRelacionConAlumno.Text;
+            string representanteLegal = txtRelacionConAlumno.Text;
             string clave = txtUsuarioClave.Text;
             string nombreAlumno = txtNombreAlumno.Text;
             int.TryParse(txtGradoAlumno.Text, out int gradoAlumnoNum);
@@ -51,9 +46,9 @@ namespace Interfaz
             int.TryParse(txtLegajoAlumno.Text, out int legajoAlumnoNum);
             int numeroLegajoAlumno = legajoAlumnoNum;
 
-            Familia unaFamilia = new Familia(nombrePadreMadreOTutor, 1, direccionCorreo, clave, relacionConAlumno,
+            Familia unaFamilia = new Familia(1, nombreRepresentanteLegal, direccionCorreo, clave, representanteLegal,
                                              nombreAlumno, gradoAlumno, numeroLegajoAlumno);
-            this.nombrePadreMadreOTutor = unaFamilia;
+            this.familia = unaFamilia;
 
             this.DialogResult = DialogResult.OK;
         }
@@ -62,5 +57,6 @@ namespace Interfaz
         {
             this.DialogResult = DialogResult.No;
         }
+        #endregion
     }
 }
